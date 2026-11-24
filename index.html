@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BMW – Welcome</title>
+<link rel="stylesheet" href="style.css"></head><body>
+
+<section id="intro" class="screen on">
+  <video id="vid" src="assets/intro.mp4" playsinline preload="auto"></video>
+  <button id="start" aria-label="Start"><i></i><span>Tap to begin</span></button>
+</section>
+
+<section id="login" class="screen">
+  <div class="card">
+    <input id="user" aria-label="User name" autocomplete="username" placeholder="Enter your name">
+    <label for="dob">Date of birth</label>
+    <input id="dob" type="text" inputmode="text" autocomplete="bday" autocapitalize="off" spellcheck="false">
+    <div class="err" id="err" role="alert"></div>
+    <button class="go" id="enter">Enter</button>
+  </div>
+</section>
+
+<section id="count" class="screen">
+  <video id="vid2" src="assets/countdown.mp4" playsinline></video>
+  <div class="lbl" id="cl">Next birthday in</div>
+  <div class="units">
+    <div class="u"><b id="cd">0</b><span>Days</span></div>
+    <div class="u"><b id="ch">00</b><span>Hours</span></div>
+    <div class="u"><b id="cm">00</b><span>Min</span></div>
+    <div class="u"><b id="cs">00</b><span>Sec</span></div>
+  </div>
+  <button id="tap">Tap anywhere to continue</button>
+</section>
+
+<section id="wish" class="screen">
+  <div class="wishbg"></div>
+  <div class="wishwrap" id="wishform">
+    <h1 class="wtitle">Make a wish</h1>
+    <textarea id="wishtext" placeholder="Type your wish…" maxlength="300"></textarea>
+    <button class="go" id="wishsend">Send wish</button>
+  </div>
+  <div class="wishwrap" id="wishsent" style="display:none">
+    <p class="wsent">Your wish has been sent to<br><span>BMW ///M</span></p>
+  </div>
+  <div id="wtap">Tap anywhere to continue</div>
+  <audio id="rev" src="assets/m5-rev.mp3" preload="auto"></audio>
+</section>
+
+<section id="msg" class="screen">
+  <video id="vid3b" muted playsinline loop aria-hidden="true"></video>
+  <video id="vid3" src="assets/letter.mp4" muted playsinline loop></video>
+  <div class="mw"><div id="typed"></div></div>
+  <div id="mtap">Tap anywhere to continue</div>
+  <audio id="aud" src="assets/birthday-song.mp3" loop preload="auto"></audio>
+</section>
+
+<section id="home" class="screen">
+  <img alt="" src="assets/avatar.jpg">
+  <h2 id="hi">Welcome</h2>
+  <p id="meta"></p>
+  <button id="out">Sign out</button>
+</section>
+
+<script src="script.js"></script></body></html>
